@@ -1,0 +1,20 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+
+String NomeAluno;
+String CidadeAluno;
+int RGAluno;
+int CPFAluno;
+int RAAluno;
+int CEPCidade;
+float PesoAluno;
+float TamanhoAluno;
+boolean Matriculado;
+boolean Presente;
