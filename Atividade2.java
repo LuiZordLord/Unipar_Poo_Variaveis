@@ -3,16 +3,16 @@
 
 class HelloWorld {
     public static void main(String[] args) {
-        a. Nomeproduto
-        b. Precoproduto
-        c. Marcadoproduto
-        d. Quantidadeproduto
-        e. _descricaoproduto
-        f. Nomeproduto
-        g. _numeroProduto
-        h. Precodoproduto
-        i. Estoquedisponivel
-        j. Totaldeprodutos
+        String Nomeproduto
+        int Precoproduto
+        String Marcadoproduto
+        int Quantidadeproduto
+        String _descricaoproduto
+        String Nomeproduto
+        Int _numeroProduto
+        float Precodoproduto
+        int Estoquedisponivel
+        int Totaldeprodutos
 
     }
 }
