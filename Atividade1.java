@@ -8,13 +8,13 @@ class HelloWorld {
 }
 
 
-String NomeAluno;
-String CidadeAluno;
-int RGAluno;
-int CPFAluno;
-int RAAluno;
-int CEPCidade;
-float PesoAluno;
-float TamanhoAluno;
+String Nomealuno;
+String Cidadealuno;
+int Rgaluno;
+int Cpfaluno;
+int Raaluno;
+int Cepcidade;
+float Pesoaluno;
+float Tamanhoaluno;
 boolean Matriculado;
 boolean Presente;
