@@ -3,10 +3,10 @@
 
 class HelloWorld {
     public static void main(String[] args) {
-        String Nomealuno
-        int Idadealuno
-        float Nota1aluno
-        float Nota2aluno
-        double Media
+        String nomealuno
+        int idadealuno
+        float nota1aluno
+        float nota2aluno
+        double media
     }
 }
