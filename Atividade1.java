@@ -3,14 +3,14 @@
 
 class HelloWorld {
     public static void main(String[] args) {
-        String nomealuno;
-        String cidadealuno;
-        int rgaluno;
-        int cpfaluno;
-        int raaluno;
-        int cepcidade;
-        float pesoaluno;
-        float tamanhoaluno;
+        String nomeAluno;
+        String cidadeAluno;
+        int rgAluno;
+        int cpfAluno;
+        int raAluno;
+        int cepCidade;
+        float pesoAluno;
+        float tamanhoAluno;
         boolean matriculado;
         boolean presente;
      
