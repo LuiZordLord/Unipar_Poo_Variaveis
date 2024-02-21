@@ -11,7 +11,7 @@ a. Nomeproduto
 b. Precoproduto
 c. Marcadoproduto
 d. Quantidadeproduto
-e. _Descricaoproduto
+e. _descricaoproduto
 f. Nomeproduto
 g. _numeroProduto
 h. Precodoproduto
