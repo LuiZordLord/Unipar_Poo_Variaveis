@@ -3,18 +3,17 @@
 
 class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        String nomealuno;
+        String cidadealuno;
+        int rgaluno;
+        int cpfaluno;
+        int raaluno;
+        int cepcidade;
+        float pesoaluno;
+        float tamanhoaluno;
+        boolean matriculado;
+        boolean presente;
+     
     }
 }
 
-
-String Nomealuno;
-String Cidadealuno;
-int Rgaluno;
-int Cpfaluno;
-int Raaluno;
-int Cepcidade;
-float Pesoaluno;
-float Tamanhoaluno;
-boolean Matriculado;
-boolean Presente;
