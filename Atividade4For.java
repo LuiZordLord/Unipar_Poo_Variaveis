@@ -4,7 +4,7 @@ public class numeros20 {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
-    int numeros;
+    int numeros = 0;
 
     for (int n = 1; n <= 20; n++){
         System.out.println("Informe qualquer número: ");
