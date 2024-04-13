@@ -1,0 +1,42 @@
+1- O que é orientação a objetos e quais são seus princípios fundamentais?
+R: A orientação a objetos é um modelo de programação centrado na noção de "objetos", que englobam tanto dados (como campos, atributos
+ou propriedades) quanto comportamentos (como métodos, funções ou operações). Estes objetos interagem entre si, comunicando-se através de mensagens. Os pilares essenciais desse paradigma são: Abstração, Herança, Polimorfismo e Encapsulamento.
+
+2-Quais são as vantagens da orientação a objetos em comparação com paradigmas de programação procedural?
+R: A orientação a objetos oferece vantagens sobre a programação procedural, incluindo reutilização de código através da herança, encapsulamento que promove modularidade, abstração que facilita 
+a modelagem do mundo real, polimorfismo que aumenta a flexibilidade e melhor gerenciamento da complexidade do software. Essas vantagens resultam em código mais modular, reutilizável, flexível e fácil de entender.
+
+3- Explique o conceito de encapsulamento e como ele é implementado em linguagens de programação orientadas a objetos.
+R: É um princípio da programação orientada a objetos que consiste em agrupar dados e métodos relacionados em uma única unidade, chamada de classe, e controlar o acesso a esses membros usando modificadores de acesso, como public, private e protected.
+Isso permite ocultar a implementação interna de um objeto e proteger seus dados, promovendo a modularidade, segurança e manutenibilidade do código.
+
+4- Explique o conceito de classe e objeto em programação orientada a objetos, e como eles estão relacionados.
+R: 
+Em programação orientada a objetos, uma classe é um modelo que define a estrutura e o comportamento de objetos, enquanto um objeto é uma instância específica dessa classe,
+com seus próprios dados e comportamentos. A classe serve como um plano de fundo para criar objetos.
+
+5- Qual é a importância dos construtores e métodos em uma classe em programação orientada a objetos?
+R: Construtores são responsáveis por inicializar os objetos da classe, enquanto os métodos definem o comportamento desses objetos.
+
+6- Quais são as diferenças entre métodos estáticos e métodos de instância em uma classe?
+R: Métodos de instância operam em instâncias específicas da classe e têm acesso aos atributos da instância, enquanto métodos estáticos não estão associados a instâncias específicas,
+não têm acesso aos atributos de instância e são chamados diretamente na classe. Os métodos de instância são usados para operações dependentes do estado da instância, enquanto os métodos estáticos são usados para funcionalidades globais à classe.
+
+7- Como são tratados os conceitos de acoplamento e coesão na orientação a objetos e por que são importantes?
+R: Na orientação a objetos, acoplamento refere-se à interdependência entre classes e coesão à relação interna de elementos dentro de uma classe. Reduzir o acoplamento e aumentar a coesão são importantes para facilitar a manutenção,
+compreensão e reutilização do código. Um equilíbrio adequado entre ambos leva a sistemas mais flexíveis e robustos.
+
+8- Qual é o objetivo do metodo main?
+R: É o ponto de entrada para a execução de um programa. Iniciar um programa.
+
+9- Como ocorre a passagem de parâmetros em métodos de uma classe em programação orientada a objetos?
+R: 
+Na programação orientada a objetos, a passagem de parâmetros em métodos de uma classe pode ocorrer por valor ou por referência. Na passagem por valor, uma cópia do valor é passada, enquanto na passagem por referência,
+é passado um ponteiro ou referência para o objeto. O comportamento exato depende da linguagem de programação e do tipo de dados passado como parâmetro.
+
+10- Qual é a diferença entre os modificadores de acesso "public", "private" e "protected" em uma classe?
+R: "Public" permite acesso de qualquer lugar, "private" limita o acesso à própria classe e "protected" permite acesso por subclasses. Esses modificadores garantem encapsulamento e segurança do código.
+
+11- Qual é a importância da palavra-chave "this" em programação orientada a objetos e como ela é utilizada?
+R: "this" em programação orientada a objetos é utilizada para referenciar a instância atual de uma classe. Ela é útil para evitar ambiguidades entre variáveis locais e atributos,
+passar a própria instância como argumento para métodos e construtores, e para chamar construtores da mesma classe.
