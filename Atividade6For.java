@@ -1,56 +1,68 @@
-private class ContaBancaria {
+package Objetos;
 
-    double saldo;
-    String numeroConta;
+public class ContaBancaria {
+
+   public double saldo;
+   public String numeroConta = "193";
+   public double depositar;
+   public double sacar;
 
 }
-public static class ContaBancariaex {
 
-    double depositar;
-    double sacar;
-    double consultarSaldo;
+package Main;
 
-    }
-
-import com.sun.security.jgss.GSSUtil;
-
+import Objetos.ContaBancaria;
 import java.util.Scanner;
-public class ContaBancariaEx {
+
+public class ForAtvdd6 {
     public static void main(String[] args) {
-
-        ContaBancariaex conta = new ContaBancariaex();
-        ContaBancaria contap = new ContaBancaria();
+        ContaBancaria cb = new ContaBancaria();
         Scanner sc = new Scanner(System.in);
-        int opcao;
+        int opcao = 0;
 
-        System.out.println("O que deseja fazer?");
+        while(true) {
+
+        System.out.println();
+        System.out.println("Número da conta: " + cb.numeroConta);
+        System.out.println("Bem vindo ao Banco JusBank!");
+        System.out.println("Escolha uma opção para continuar!");
         System.out.println("1 - Depositar Dinheiro");
         System.out.println("2 - Sacar Dinheiro");
         System.out.println("3 - Consultar Conta");
-
+        System.out.println("4 - Sair");
+        System.out.println();
         opcao = sc.nextInt();
 
-        switch (opcao) {
-            case 1:
-                System.out.println("Quanto deseja depositar?");
-                conta.depositar = sc.nextDouble();
-                contap.saldo = contap.saldo + conta.depositar;
-                break;
+                switch (opcao) {
+                    case 1:
+                        System.out.println("Você acaba de depositar 1000R$ na sua conta!");
+                        cb.depositar = (cb.depositar + 1000);
+                        System.out.println();
+                        break;
 
-            case 2:
-                System.out.println("Quanto deseja sacar?");
-                conta.sacar = sc.nextDouble();
-                if (contap.saldo > 0){
-                    contap.saldo = contap.saldo - conta.sacar;
-                    break;
-                } else {
-                    System.out.println("Não há nenhum dinheiro para ser sacado!");
-                    break;
+                    case 2:
+                        System.out.println("Você acaba de sacar 1000R$ na sua conta!");
+                        cb.depositar = (cb.depositar - 1000);
+                        System.out.println();
+                        break;
+
+                    case 3:
+                        System.out.println("Você tem  na sua conta: ");
+                        System.out.println(cb.depositar);
+                        System.out.println();
+                        break;
+                    case 4:
+                        System.out.println("Obrigado por utilizar o JusBank!");
+                        System.out.println();
+                        return;
+                    default:
+                        System.out.println("Opção inválida, tente novamente!");
+                        System.out.println();
+
+
                 }
 
-        case 3:
-        System.out.println(contap.saldo);
-        break;
-    }
         }
+
+    }
 }
