@@ -2,9 +2,9 @@ import java.util.Scanner;
 class HelloWorld {
     public static void main(String[] args) {
         
-        String nome = "";
-        int idade = 0;
-        double peso = 0.0;
+        String nome = "Luiz";
+        int idade = 19;
+        double peso = 70.5;
         
         Scanner scanner = new Scanner(System.in);
         
