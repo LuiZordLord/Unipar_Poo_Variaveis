@@ -17,15 +17,12 @@ public class ContaCorrente extends HerancaContaBancaria {
 package br.unipar;
 
 public class ContaPoupanca extends HerancaContaBancaria {
-    
+
     @Override
     public boolean saque(Double valor) {
-        
+        saldo = saldo - 5;
     }
 
-
-
-    }
 }
 
 
@@ -143,3 +140,45 @@ public class ContaBancariaTest {
     
     }
 }
+
+
+package test;
+
+import br.unipar.ContaCorrente;
+import br.unipar.ContaPoupanca;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+public class ContaPoupancaTest {
+
+    @Test
+    public void testeDepositoContaPoupanca(){
+    ContaPoupanca conta = new ContaPoupanca();
+    conta.depositar(2000d);
+
+    }
+
+    @Test
+    public void testeSaqueSucessoContaPoupanca(){
+        ContaPoupanca conta = new ContaPoupanca();
+        conta.saque(1000d);
+        boolean validacao = conta.saque(500d);
+
+        assertFalse(validacao);
+        assertEquals(995, conta.obterSaldo());
+
+    }
+
+    @Test
+    public void testeSaqueInvalidoContaPoupanca(){
+    ContaPoupanca conta = new ContaPoupanca();
+    conta.saque(1200d);
+    boolean validacao - conta.saque(1000d);
+
+    assertFalse(validacao);
+    assertEquals(3000, conta.obterSaldo());
+
+    }
+
+}
+
+
