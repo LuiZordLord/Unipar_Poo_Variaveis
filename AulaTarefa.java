@@ -84,6 +84,7 @@ public class Main {
 
 
 import br.unipar.ContaCorrente;
+import br.unipar.ContaPoupanca;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -119,5 +120,16 @@ public class ContaBancariaTest {
         assertFalse(validacao);
         assertEquals(3000, conta.obterSaldo());
 
+    }
+
+    @Test
+    public void testSaqueMaiorSaldoContaPoupanca() {
+        ContaPoupanca conta = new ContaPoupanca();
+        conta.depositar(3000d);
+        boolean validacao = conta.saque(3000d);
+
+        assertFalse(validacao);
+        assertEquals(3000, conta.obterSaldo());
+    
     }
 }
