@@ -20,7 +20,14 @@ public class ContaPoupanca extends HerancaContaBancaria {
 
     @Override
     public boolean saque(Double valor) {
-        saldo = saldo - 5;
+        if ((saldo - valor - 5) >= 0){
+            saldo -=  5;
+            saldo -= valor;
+
+            return true;
+        }
+
+        return false;
     }
 
 }
@@ -142,8 +149,6 @@ public class ContaBancariaTest {
 }
 
 
-package test;
-
 import br.unipar.ContaCorrente;
 import br.unipar.ContaPoupanca;
 import org.junit.jupiter.api.Test;
@@ -152,33 +157,32 @@ public class ContaPoupancaTest {
 
     @Test
     public void testeDepositoContaPoupanca(){
-    ContaPoupanca conta = new ContaPoupanca();
-    conta.depositar(2000d);
+        ContaPoupanca conta = new ContaPoupanca();
+        conta.depositar(3000d);
 
+        assertEquals(conta.obterSaldo(),3000);
     }
 
     @Test
     public void testeSaqueSucessoContaPoupanca(){
         ContaPoupanca conta = new ContaPoupanca();
-        conta.saque(1000d);
-        boolean validacao = conta.saque(500d);
+        conta.depositar(4000d);
+        boolean validacao = conta.saque(3000d);
 
-        assertFalse(validacao);
+        assertTrue(validacao);
         assertEquals(995, conta.obterSaldo());
 
     }
 
     @Test
     public void testeSaqueInvalidoContaPoupanca(){
-    ContaPoupanca conta = new ContaPoupanca();
-    conta.saque(1200d);
-    boolean validacao - conta.saque(1000d);
+        ContaPoupanca conta = new ContaPoupanca();
+        conta.depositar(3000d);
+        boolean validacao = conta.saque(3000d);
 
-    assertFalse(validacao);
-    assertEquals(3000, conta.obterSaldo());
+        assertFalse(validacao);
+        assertEquals(3000, conta.obterSaldo());
 
     }
 
 }
-
-
