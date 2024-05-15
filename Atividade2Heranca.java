@@ -13,6 +13,7 @@ public class ContaCorrente extends HerancaContaBancaria {
     }
 }
 
+----------
 
 package br.unipar;
 
@@ -32,7 +33,7 @@ public class ContaPoupanca extends HerancaContaBancaria {
 
 }
 
-
+----------
 
 package br.unipar;
 
@@ -67,6 +68,7 @@ abstract class HerancaContaBancaria implements InterfaceContaBancaria {
     }
 }
 
+----------
 
 package br.unipar;
 
@@ -79,6 +81,7 @@ public interface InterfaceContaBancaria {
 
 }
 
+----------
 
 package br.unipar;
 
@@ -96,6 +99,7 @@ public class Main {
     }
 }
 
+----------
 
 import br.unipar.ContaCorrente;
 import br.unipar.ContaPoupanca;
@@ -148,6 +152,7 @@ public class ContaBancariaTest {
     }
 }
 
+----------
 
 import br.unipar.ContaCorrente;
 import br.unipar.ContaPoupanca;
