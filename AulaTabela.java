@@ -11,7 +11,9 @@ public class Main {
     public static void main(String[] args) {
         criarTabelaUsuario();
 
-        inserirUsuario("taffe","123456","Fabio","1899-01-01");
+        inserirUsuario("taffe2","123456","Fabio","1899-01-01");
+
+        listarTodosUsuarios();
 
     }
 
@@ -62,6 +64,27 @@ public class Main {
             preparedStatement.executeUpdate();
 
             System.out.println("Usuario inserido!");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void listarTodosUsuarios(){
+        try {
+            Connection conn = connection();
+
+                    Statement statement = conn.createStatement();
+
+            ResultSet result = statement.executeQuery("SELECT * FROM usuarios");
+
+            while (result.next()){
+
+                System.out.println(result.getInt("codigo"));
+                System.out.println(result.getString("username"));
+
+
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
