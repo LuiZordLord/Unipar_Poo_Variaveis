@@ -1,18 +1,17 @@
 package br.unipar;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Main {
 
-    private static final String url = "jdbc:postgresql://localhost:5432/exemplo1";
+    private static final String url = "jdbc:postgresql://localhost:5432/Exemplo1";
     private static final String user = "postgres";
     private static final String password = "admin123";
-    criarTabelaUsuario();
 
     public static void main(String[] args) {
+        criarTabelaUsuario();
+
+        inserirUsuario("taffe","123456","Fabio","1899-01-01");
 
     }
 
@@ -44,6 +43,29 @@ public class Main {
             exception.printStackTrace();
         }
 
+    }
+
+    public static void inserirUsuario(String username, String password, String nome, String dataNascimento){
+        try {
+            Connection conn = connection();
+
+            PreparedStatement preparedStatement = conn.prepareStatement(
+                    "INSERT INTO usuarios (username,password,nome,nascimento)"
+                    + "VALUES(?,?,?,?)"
+            );
+
+            preparedStatement.setString(1,username);
+            preparedStatement.setString(2,password);
+            preparedStatement.setString(3,nome);
+            preparedStatement.setDate(4, java.sql.Date.valueOf(dataNascimento));
+
+            preparedStatement.executeUpdate();
+
+            System.out.println("Usuario inserido!");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
