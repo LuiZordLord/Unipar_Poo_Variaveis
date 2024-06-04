@@ -2,10 +2,7 @@ package br.unipar.erp.data.entity;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +17,7 @@ import lombok.Setter;
 public class Usuario {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigo;
 
     @Column (name = "username")
@@ -35,6 +33,7 @@ public class Usuario {
 
 }
 
+
 ==========
 ==========
 
@@ -43,6 +42,8 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/Exemplo1
 spring.datasource.username=postgres
 spring.datasource.password=admin123
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgresSQLDialect
+spring.jpa.show-sql=true
+
 
 ==========
 ==========
@@ -57,6 +58,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @SpringBootApplication
 public class ErpApplication implements CommandLineRunner {
@@ -76,9 +78,28 @@ public class ErpApplication implements CommandLineRunner {
 		usuario.setUsuario("springjpa");
 		usuario.setDataNascimento(LocalDate.of(1993,6,20));
 
+		Usuario usuarioSalvo = usuarioRepository.save(usuario);
+		System.out.println(" Codigo usuario " + usuarioSalvo.getCodigo());
+
 		usuarioRepository.save(usuario);
+
+		Long totalRegistros = usuarioRepository.count();
+		System.out.println("Registros: " + totalRegistros);
+
+		List<Usuario> lista = usuarioRepository.findAll();
+
+		lista.forEach( usuarioLista -> {
+			System.out.println("Usuario: " + usuarioLista.getNome());
+		});
+
+		usuarioRepository.
+				findByUsuarioAndSenha("postgres","admin123");
+
+				usuarioRepository.deleteAll();
+
 	}
 }
+
 
 ==========
 ==========
@@ -91,4 +112,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+
+    Usuario findByUsuarioAndSenha(String usuario, String senha);
+
 }
